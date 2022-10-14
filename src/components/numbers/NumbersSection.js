@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function NumbersSection() {
 
-  const fullNumbers = []
+  // const fullNumbers = []
   const firstSixRandomsArray = []
   const lastNumberArray = []
   const [round, setRound] = useState(firstSixRandomsArray)
@@ -27,7 +27,7 @@ function NumbersSection() {
 
     setLastRound(lastNumberArray)
 
-    fullNumbers = round.concat(lastRound)
+    // fullNumbers = round.concat(lastRound)
   }
 
 
@@ -36,9 +36,14 @@ function NumbersSection() {
     <div class="flex justify-center mt-[40px]" >
 
       {
-        firstSixRandomsArray.map((item, idx) => (
-          item
-        ))
+        firstSixRandomsArray.map((item, idx) =>
+          <li key={idx} class='border-solid border-sky-300 w-5 h-5 rounded-full' >{item}</li>
+        )
+      }
+      {
+        lastNumberArray.map((item, idx) =>
+          <li key={idx} class='border-solid border-sky-300 w-5 h-5 rounded-full bg-sky-300' >{item}</li>
+        )
       }
     </div>
   );
