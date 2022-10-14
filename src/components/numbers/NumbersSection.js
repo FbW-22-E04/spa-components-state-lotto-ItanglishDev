@@ -36,17 +36,23 @@ function NumbersSection() {
 
   return (
     <div class="flex justify-center mt-[40px]" >
+      <div>
 
-      {
-        firstSixRandomsArray.map((item, idx) =>
-          <li key={idx} class='border-solid border-sky-300 w-5 h-5 rounded-full' >{item}</li>
-        )
-      }
-      {
-        lastNumberArray.map((item, idx) =>
-          <li key={idx} class='border-solid border-sky-300 w-5 h-5 rounded-full bg-sky-300' >{item}</li>
-        )
-      }
+        {
+          firstSixRandomsArray.map((item, idx) =>
+            <li key={idx} class='border-solid border-sky-300 w-5 h-5 rounded-full' >{item}</li>
+          )
+        }
+        {
+          lastNumberArray.map((item, idx) =>
+            <li key={idx} class='border-solid border-sky-300 w-5 h-5 rounded-full bg-sky-300' >{item}</li>
+          )
+        }
+      </div>
+      <div>
+        <ResetButton />
+        <ShowButton />
+      </div>
     </div>
   );
 }
