@@ -1,6 +1,6 @@
 function H1() {
   return (
-    <div>Lotto 6/49</div>
+    <h1>Lotto 6/49</h1>
   );
 }
 
