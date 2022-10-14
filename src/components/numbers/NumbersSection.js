@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ResetButton from "../buttons/ResetButton";
+import ShowButton from "../buttons/ShowButtons";
 
 function NumbersSection() {
 
