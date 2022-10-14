@@ -1,6 +1,6 @@
 function SubHeader() {
   return (
-    <p>generating lucky number</p>
+    <p class='mt-5'>generating lucky number</p>
   );
 }
 

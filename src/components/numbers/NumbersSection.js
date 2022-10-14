@@ -2,15 +2,16 @@ import { useState } from "react";
 
 function NumbersSection() {
 
-  const [round, setRound] = useState(new Array())
-  const [lastRound, setLastRound] = useState(new Array())
+  const fullNumbers = []
+  const firstSixRandomsArray = []
+  const lastNumberArray = []
+  const [round, setRound] = useState(firstSixRandomsArray)
+  const [lastRound, setLastRound] = useState(lastNumberArray)
 
 
   const randomNumbers = () => {
 
     // const firstSixRandoms = 
-    const fullNumbers = []
-    const firstSixRandomsArray = []
 
     if (firstSixRandomsArray.length < 5) {
 
@@ -21,10 +22,9 @@ function NumbersSection() {
     }
     setRound(firstSixRandomsArray)
 
-
-
     const lastRandom = Math.floor(Math.random() * 10)
-    const lastNumberArray = [lastRandom]
+    lastNumberArray = [lastRandom]
+
     setLastRound(lastNumberArray)
 
     fullNumbers = round.concat(lastRound)
@@ -32,9 +32,16 @@ function NumbersSection() {
 
 
 
-  return ( 
+  return (
+    <div class="flex justify-center mt-[40px]" >
 
-   );
+      {
+        firstSixRandomsArray.map((item, idx) => (
+          item
+        ))
+      }
+    </div>
+  );
 }
 
 export default NumbersSection;
