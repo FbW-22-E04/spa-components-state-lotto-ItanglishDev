@@ -1,6 +1,4 @@
 import { useState } from "react";
-import ResetButton from "../buttons/ResetButton";
-import ShowButton from "../buttons/ShowButtons";
 
 function NumbersSection() {
 
@@ -50,8 +48,8 @@ function NumbersSection() {
         }
       </div>
       <div>
-        <ResetButton />
-        <ShowButton />
+        <button className="border-2 rounded border-teal-600 text-teal-700 w-[70px] h-[45px]">Reset</button>
+        <button class="bg-teal-700 rounded text-white w-[200px] h-[45px] ml-5" >Show me lucky numbers</button>
       </div>
     </div>
   );
