@@ -1,9 +1,11 @@
 import './App.css';
+import H1 from './H1';
 
 function App() {
   return (
     <div className="App">
-      HI
+      <H1 />
+
     </div>
   );
 }
